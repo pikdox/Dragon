@@ -1,6 +1,6 @@
 from flask import Blueprint,request,render_template,redirect, make_response
 from micro_db import MicroDB
-import hashlib
+import hashlib,os
 
 _current_url = '/etk'
 
@@ -8,8 +8,7 @@ bp = Blueprint("etk", __name__, url_prefix=_current_url,template_folder='./templ
 
 db = MicroDB('etk_db')
 
-security_salt = '5bISefivZWoHpu93jYdNFBJTnaWIRrQX'
-
+security_salt = os.getenv('elentoolkit_secretkey')
 
 def check_session():
     username = str(request.cookies.get('username'))
