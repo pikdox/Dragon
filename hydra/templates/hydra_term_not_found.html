@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block head %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <style>
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 20px;
+      color: rgb(241, 49, 49);
+    }
+    p {
+      color: lightcoral;
+    }
+
+    a {
+      text-decoration: none;
+      color: #4CAF50;
+    }
+    a:hover {
+      text-decoration: underline;
+      color: #207e23;
+    }
+
+  </style>
+{% endblock %}
+{% block content %}
+  <div class="container">
+    <h1>Sem resultados para "{{ query }}"</h1>
+    <p>Desculpa, não conseguimos encontrar nada sobre.</p>
+    <a href="/">Back to search</a>
+  </div>
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% block head %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<style>
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-button-group {
+  text-align: right;
+}
+
+label {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type=text], textarea {
+  background-color: #fcfcfc;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin: 5px 0 20px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button[type=submit]:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #4CAF50;
+}
+
+</style>
+{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>Cadastra termo</h1>
+    <form method="POST">
+      <div class="form-group">
+        <label for="key-input">Termo:</label>
+        <input type="text" id="key-input" name="key-input" placeholder="Digite seu termo...">
+      </div>
+      <div class="form-group">
+        <label for="content-textarea">Conteúdo:</label>
+        <textarea id="content-textarea" name="content-textarea" placeholder="Digite seu conteúdo..." rows="6"></textarea>
+      </div>
+      <div class="form-button-group">
+        <a href="/search">Pesquisar</a>
+        ou
+        <button type="submit">Enviar</button>
+      </div>
+    </form>
+</div>
+{% endblock %}
