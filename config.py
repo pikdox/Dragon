@@ -1,6 +1,6 @@
 elentoolkit = {
-    'dir':'/etk/'
+    'dir':'/etk'
 }
 hydra = {
-    'dir':'/hydra/'
+    'dir':'/hydra'
 }
