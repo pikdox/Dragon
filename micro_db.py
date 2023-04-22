@@ -8,11 +8,11 @@ __email__ = "kleber.code@gmail.com"
 import json, os
 
 class MicroDB:
-    _db_dir = './databases/'
+    _db_dir = './db/'
     _db_name = ''
     _data = {}
 
-    def __init__(self,db_name:str,db_dir='./databases/') -> None:
+    def __init__(self,db_name:str,db_dir='./db/') -> None:
         """
         Initializes a MicroDB instance.
         :param db_name: the name of the database.

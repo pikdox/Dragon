@@ -8,7 +8,7 @@ bp = Blueprint("etk", __name__, url_prefix=_current_url,template_folder='./templ
 
 db = MicroDB('etk_db')
 
-security_salt = os.getenv('elentoolkit_secretkey')
+security_salt = str(os.getenv('elentoolkit_secretkey'))
 
 def check_session():
     username = str(request.cookies.get('username'))
