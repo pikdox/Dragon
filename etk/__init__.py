@@ -2,9 +2,11 @@ from flask import Blueprint,request,render_template,redirect, make_response
 from micro_db import MicroDB
 import hashlib,os
 
+from config import elentoolkit
+
 _current_url = '/etk'
 
-bp = Blueprint("etk", __name__, url_prefix=_current_url,template_folder='./templates')
+bp = Blueprint("etk", __name__, url_prefix=_current_url,template_folder=f'{elentoolkit.get("dir")}/templates',static_folder=f'{elentoolkit.get("dir")}/static')
 
 db = MicroDB('etk_db')
 
